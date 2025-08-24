@@ -1,0 +1,34 @@
+{
+  "name": "YouTube and Spotify Downloader API",
+  "description": "A FastAPI application for downloading YouTube and Spotify content",
+  "keywords": ["python", "fastapi", "youtube-dl", "spotify", "downloader"],
+  "website": "https://github.com/Anggahrm/Apiytdlp",
+  "repository": "https://github.com/Anggahrm/Apiytdlp",
+  "success_url": "/",
+  "stack": "heroku-24",
+  "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "env": {
+    "SPOTIFY_CLIENT_ID": {
+      "description": "Spotify Developer Client ID",
+      "value": "your_spotify_client_id_here"
+    },
+    "SPOTIFY_CLIENT_SECRET": {
+      "description": "Spotify Developer Client Secret",
+      "value": "your_spotify_client_secret_here"
+    }
+  },
+  "addons": []
+}
